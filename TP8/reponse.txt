@@ -1,0 +1,46 @@
+Galaad Martineaux - BUT1 TP1K
+Partie 1
+	Exercice 1
+		Oui.
+		1.	f(i)   -> void f(int)
+		2.	f(d)   -> void f(double)
+		3.	f(c)
+		4.	f(i,d) -> void f(int, double)
+		5.	f(d,i) -> void f(double, int)
+		6.	f(i,i) -> void f(int, double)	// i est converti implicitement en double dans le second argument
+		7.	f(i,c) -> void f(double, int)	// i est converti implicitement en double dans le premier argument
+							// et c est implicitement converti en int dans le second argument
+
+	Exercice 2
+		Techniquement, le programme ne compilerait pas car il est interdit de distinguer des surcharges
+		uniquement par leur type de retour.
+
+		Néanmoins, si le programme choisissait la recharge adaptée (si la valeur qu'on modifie est un int,
+		le programme y assignera la réponse de la surcharge retournant un int), nous aurions pour affichage:
+
+		i = 4 et d = 2
+
+	Exercice 3
+		Dans ecrire 1 : Bonjour Ibrahim 15 23  
+		Dans ecrire 1 : Au revoir Celeste 15 10
+		Dans ecrire 2 : Salut Dong 15 15
+
+		Pour la première ligne, il utilise la première déclaration de ecrire.
+
+		Pour la seconde ligne, il utilise la première déclaration de ecrire. 10 s'affiche sans qu'on l'ai 	
+		spécifié car lors de sa déclaration, le dernier argument a une valeur par défaut.
+
+		Pour la dernière ligne, il utilise la seconde surcharge de ecrire. Dong s'affiche sans qu'on l'ai
+		spécifié car lors de sa déclaration, le dernier argument a une valeur par défaut.
+		
+		Si nous ajoutions la ligne proposée, le programme ne compilerait pas puisque les deux surcharges
+		peuvent correspondre.
+
+Partie 2
+	3)	En laissant "catch()" vide, rien ne s'affiche et le programme retourne 0, plantant
+		silencieusement après l'erreur.
+		
+		Si nous supprimons "catch()" et son contenu, alors le programme ne compile pas.
+
+	4)	Ceci s'affiche: terminate called after throwing an instance of 'int' 
+		Nous utilisons "throw()" sans que quoi que ce soit puisse "catch()" l'erreur.
